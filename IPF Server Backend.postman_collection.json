@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "801f089e-debf-4e86-aa6f-70bce558df64",
+		"name": "IPF Server Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar - Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"rstonutti\",\r\n    \"contrasenia\": \"qwerty12345\",\r\n    \"correo\": \"rstonutti@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/registro",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login - Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"rstonutti\",\r\n    \"contrasenia\": \"qwerty12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos - Estudiantes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/estudiante",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"estudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener - Estudiante",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/estudiante/61761120662c15a91873c10a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"estudiante",
+						"61761120662c15a91873c10a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear - Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTc2MGM0ZGQzODUyMDhhOTEwZWE0Y2QiLCJpYXQiOjE2MzUxMjY1NTcsImV4cCI6MTYzNTIxMjk1N30.nyk4Rr9-KbtEUQ4jGzWbx38j4_sB8pVbSRdn8-uobVE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"datos_personales\": {\r\n        \"nombre_apellido\": \"Ariela Romero\",\r\n        \"edad\": 18,\r\n        \"direccion\": {\r\n            \"calle\": \"Avenida Siempre Viva\",\r\n            \"ciudad\": \"Formosa\"\r\n        },\r\n        \"dni\": \"44118456\",\r\n        \"correo\": \"arigato@hotmail.com\",\r\n        \"numero_telefono\": [\r\n\t\t    \"3704049794\"\r\n\t],\r\n        \"genero\": 1, \r\n        \"nacionalidad\":\"Argentina\"\r\n    },\r\n    \"secundario\": {\r\n        \"institucion\": \"Juan Enrique Dring\",\r\n        \"titulo\": \"Bachiller\"\r\n    },\r\n    \"conocimientos_informaticos\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/estudiante",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"estudiante"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar - Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTc2MGM0ZGQzODUyMDhhOTEwZWE0Y2QiLCJpYXQiOjE2MzUxMjY1NTcsImV4cCI6MTYzNTIxMjk1N30.nyk4Rr9-KbtEUQ4jGzWbx38j4_sB8pVbSRdn8-uobVE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"datos_personales\": {\r\n        \"nombre_apellido\":\"Soledad Serrano\",\r\n        \"edad\": 18,\r\n        \"direccion\": {\r\n            \"calle\": \"Marcial Roja\",\r\n            \"ciudad\": \"Formosa\"\r\n        },\r\n        \"dni\": \"44876085\",\r\n        \"correo\": \"miliserrrano@gmail.com\",\r\n        \"numero_telefono\": [\r\n            \"3704642774\"\r\n        ],\r\n        \"genero\": 1, \r\n        \"nacionalidad\": \"Argentina\"\r\n    },\r\n    \"secundario\": {\r\n        \"institucion\": \"Gral. San Martin\",\r\n        \"titulo\": \"Administración de las organizaciones\"\r\n    },\r\n    \"conocimientos_informaticos\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/estudiante/61761120662c15a91873c10a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"estudiante",
+						"61761120662c15a91873c10a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar - Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MTc2MGM0ZGQzODUyMDhhOTEwZWE0Y2QiLCJpYXQiOjE2MzUxMjY1NTcsImV4cCI6MTYzNTIxMjk1N30.nyk4Rr9-KbtEUQ4jGzWbx38j4_sB8pVbSRdn8-uobVE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/estudiante/delete/61761120662c15a91873c10a",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"estudiante",
+						"delete",
+						"61761120662c15a91873c10a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

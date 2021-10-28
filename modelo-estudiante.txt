@@ -1,0 +1,45 @@
+{
+    "datos_personales": {
+        "nombre_apellido":"Soledad Serrano",
+        "edad": 18,
+        "direccion": {
+            "calle": "Marcial Roja",
+            "ciudad": "Formosa"
+        },
+        "dni": "44876085",
+        "correo": "miliserrrano@gmail.com",
+        "numero_telefono": [
+            "3704642774"
+        ],
+        "genero": 1, 
+        "nacionalidad": "Argentina"
+    },
+    "secundario": {
+        "institucion": "Gral. San Martin",
+        "titulo": "Administración de las organizaciones"
+    },
+    "conocimientos_informaticos": false
+}
+
+{
+    "datos_personales": {
+        "nombre_apellido": "Ariela Romero",
+        "edad": 18,
+        "direccion": {
+            "calle": "Avenida Siempre Viva",
+            "ciudad": "Formosa"
+        },
+        "dni": "44118456",
+        "correo": "arigato@hotmail.com",
+        "numero_telefono": [
+		    "3704049794"
+	],
+        "genero": 1, 
+        "nacionalidad":"Argentina"
+    },
+    "secundario": {
+        "institucion": "Juan Enrique Dring",
+        "titulo": "Bachiller"
+    },
+    "conocimientos_informaticos": true
+}
